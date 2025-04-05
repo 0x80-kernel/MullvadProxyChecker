@@ -1,8 +1,20 @@
 # Mullvad Proxy Checker
-Scrapes all proxys from [here](https://api.mullvad.net/www/relays/wireguard/ "WIREGUARD API") and pings them with 20 threads, the working ones are saved on proxies.txt.
+
+Scrapes all proxies from the [Mullvad WireGuard API](https://api.mullvad.net/www/relays/wireguard/) and pings them using 20 threads. The working ones are saved to `proxies.txt`.
+
 ## Build
-``
-mkdir build && cd build
+
+To build the project, run the following commands:
+
+```bash
+mkdir build
+cd build
 cmake ..
 make
-``
+```
+
+## Prerequisites
+
+* A C++ Compiler (like GCC or Clang)
+* CMake (version 3.10 or higher)
+* Make
